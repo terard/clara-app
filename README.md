@@ -4,7 +4,7 @@ Star ratings are marketing. The signal is in the complaints that repeat across v
 
 Clara is a portable ICM-style competitive-intelligence researcher for ops tooling. It refuses to summarize a single competitor in isolation. Before researching, it asks what wedge, buyer segment, belief, competitor set, and decision the user is testing. Then it weighs public review data, field discussions, and vendor material to separate vendor-specific misses from category-wide white space.
 
-Public repo: https://github.com/terard/clara-ops-gap-researcher
+Public repo: https://github.com/terard/clara-app
 
 ## Who It Is For
 
@@ -28,25 +28,38 @@ Clara is for founders, product leaders, and operators evaluating an ops-tooling 
 
 ## Use It
 
-1. Drop `ops-gap-researcher/` into a Claude Code project.
-2. Open Claude in that project and say: `Use ops-gap-researcher to research [ops-tooling category]`.
+1. Clone this repo (or drop its files) into a Claude Code project.
+2. Open Claude in that project and say: `Use Clara to research [ops-tooling category]`.
 3. Answer the angle gate. Clara will ask for category, segment, competitor set, wedge, beliefs, source inputs, and decision.
 4. Let Claude web-fetch public sources, or paste reviews into the conversation if a review site blocks fetch.
 5. Review the source-health section before using the recommendation.
 
-## Worked Example
+## Worked Examples
 
-The included demo researches client onboarding portals for B2B implementation teams.
+The repo ships three complete demo runs, each with source notes, a transcript, and a white-space map.
 
-- Source notes: `ops-gap-researcher/demo/client-onboarding-source-notes.md`
-- Full transcript: `ops-gap-researcher/demo/client-onboarding-transcript.md`
-- White-space map: `ops-gap-researcher/demo/client-onboarding-white-space-map.md`
-- Walkthrough video: `walkthrough/clara-walkthrough.mp4`
+**Client onboarding portals** — the canonical walkthrough, researching onboarding portals for B2B implementation teams.
+
+- Source notes: `demo/client-onboarding-source-notes.md`
+- Full transcript: `demo/client-onboarding-transcript.md`
+- White-space map: `demo/client-onboarding-white-space-map.md`
+
+**Client-onboarding wedge vs incumbents** — a thinner-source run that shapes a wedge hypothesis rather than committing to a build.
+
+- Source notes: `demo/client-onboarding-wedge-source-notes.md`
+- Full transcript: `demo/client-onboarding-wedge-transcript.md`
+- White-space map: `demo/client-onboarding-wedge-white-space-map.md`
+
+**Staff shift scheduling** — a second category, applying the same angle gate and source weighting to scheduling tools.
+
+- Source notes: `demo/staff-shift-scheduling-source-notes.md`
+- Full transcript: `demo/staff-shift-scheduling-transcript.md`
+- White-space map: `demo/staff-shift-scheduling-white-space-map.md`
 
 ## Runtime Folder
 
 ```text
-ops-gap-researcher/
+clara-app/
 +-- CLAUDE.md
 +-- CONTEXT.md
 +-- identity.md
@@ -59,12 +72,14 @@ ops-gap-researcher/
     +-- client-onboarding-source-notes.md
     +-- client-onboarding-transcript.md
     +-- client-onboarding-white-space-map.md
+    +-- client-onboarding-wedge-source-notes.md
+    +-- client-onboarding-wedge-transcript.md
+    +-- client-onboarding-wedge-white-space-map.md
+    +-- staff-shift-scheduling-source-notes.md
+    +-- staff-shift-scheduling-transcript.md
+    +-- staff-shift-scheduling-white-space-map.md
 ```
 
 ## What It Is Not
 
 Clara is not a scraper, API pipeline, scheduled ingestion system, hosted chatbot, or review database. It is a judgment layer: portable instructions and source-weighing rules that tell an AI agent how to investigate public material at runtime.
-
-## Submission Blurb
-
-See `submission-blurb.md`.

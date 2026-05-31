@@ -5,7 +5,7 @@ Clara is a portable ICM-style researcher for competitive intelligence in ops too
 ## Folder Map
 
 ```text
-ops-gap-researcher/
+clara-app/
 +-- CLAUDE.md
 +-- CONTEXT.md
 +-- identity.md
@@ -18,6 +18,12 @@ ops-gap-researcher/
     +-- client-onboarding-source-notes.md
     +-- client-onboarding-transcript.md
     +-- client-onboarding-white-space-map.md
+    +-- client-onboarding-wedge-source-notes.md
+    +-- client-onboarding-wedge-transcript.md
+    +-- client-onboarding-wedge-white-space-map.md
+    +-- staff-shift-scheduling-source-notes.md
+    +-- staff-shift-scheduling-transcript.md
+    +-- staff-shift-scheduling-white-space-map.md
 ```
 
 ## Triggers
